@@ -1,0 +1,63 @@
+body{
+    background-color: #fff !important;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-menu a {
+    font-weight: 600;
+}
+
+.organization-information{
+    background-color: #eee;
+}
+
+.email-phone{
+    margin: 0 2px;
+    padding: 5px;
+    display: inline-block;
+    font-size: 13px;
+}
+
+.jumbotron-text{
+    font-weight: 600;
+}
+
+.about-us-banner{
+    padding: 20px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.about-us-banner img{
+    width: 400px;
+}
+
+.people-think{
+    padding-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    background-color: #eee;
+}
+
+.people-avatar{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.image-center{
+    justify-content: center;
+}
+
+.people-card{
+    padding: 30px;
+}
+
+.gallery img{
+    width: 80px;
+}
+
+.himasi-footer{
+    padding: 20px 0;
+    margin: 0px !important;
+}
