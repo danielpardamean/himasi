@@ -12,6 +12,7 @@
       <link rel="stylesheet" type="text/css" href="<?php echo get_bloginfo('template_directory'); ?>/src/css/blog.css">
       <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
       <?php wp_head(); ?>
    </head>
    <body>
@@ -34,13 +35,25 @@
             </div>
          </div>
       </div>
+      <style>
+            figure.image{
+                  width: 150px;
+            }
+
+            @media(max-height: 1085px){
+                  figure.image{
+                        width: 110px;
+                        margin: 0 10px;
+                  }
+            }
+      </style>
       <!-- START NAV -->
       <nav class="navbar">
          <div class="container">
             <div class="navbar-brand">
-               <a class="navbar-item" href="../">
-                     <img src="<?= get_theme_mod('logo_setting') ?>" alt="Logo">
-               </a>
+               <figure class="image">
+                     <img src="<?= get_theme_mod('logo_setting', get_template_directory_uri() . '/src/images/logo.png') ?>" alt="Logo">
+               </figure>
                <div id="navbar-burger-id" class="navbar-burger">
                   <span></span>
                   <span></span>
