@@ -40,7 +40,7 @@
                   width: 150px;
             }
 
-            @media(max-height: 1085px){
+            @media(max-width: 1085px){
                   figure.image{
                         width: 110px;
                         margin: 0 10px;

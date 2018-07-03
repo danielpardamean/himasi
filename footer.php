@@ -17,7 +17,7 @@
                                                 <?php
                                                         $attachments = get_posts(array(
                                                                 'post_type' => 'attachment',
-                                                                'posts_per_page' => 9,
+                                                                'posts_per_page' => 6,
                                                                 'numberposts' => -1,
                                                                 'post_status' => null,
                                                                 'post_parent' => null,
