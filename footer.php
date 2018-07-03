@@ -31,11 +31,22 @@
                                                                 'suppress_filters' => true
                                                         ));
                                                 ?>
+                                                <style>
+                                                .center-cropped {
+                                                        width: 100%;
+                                                        height: 100px;
+                                                        background-position: center center;
+                                                        background-repeat: no-repeat;
+                                                        background-size: cover;
+                                                }
+                                                </style>
                                                 <?php foreach($attachments as $attachment): ?>
-                                                <div class="column gallery-margin is-one-quarter is-paddingless">
-                                                        <figure class="image is-5by4">
+                                                <div class="column gallery-margin is-two-fifths is-paddingless">
+                                                        <div class="center-cropped" style="background-image: url('<?= $attachment->guid ?>');">
+                                                        </div>
+                                                        <!-- <figure class="image is-5by4">
                                                                 <img src="<?= $attachment->guid ?>">
-                                                        </figure>
+                                                        </figure> -->
                                                 </div>
                                                 <?php endforeach ?>
                                         </div>
