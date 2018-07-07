@@ -9,7 +9,25 @@
         <section class="articles">
             <div class="column is-8 is-offset-2">
             <?php
-            $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1));
+                if(is_page('blog')){
+                    $queryParams = array(
+                        'post_type'=>'post',
+                        'post_status'=>'publish',
+                        'posts_per_page'=>-1,
+                        'cat' => '2'
+                    );
+
+                }elseif(is_page('event')){
+                    $queryParams = array(
+                        'post_type'=>'post',
+                        'post_status'=>'publish',
+                        'posts_per_page'=>-1,
+                        'cat' => '3'
+                    );
+                }
+            ?>
+            <?php
+            $wpb_all_query = new WP_Query($queryParams);
 
             if ($wpb_all_query->have_posts()) : while ($wpb_all_query->have_posts()) : $wpb_all_query->the_post();
             ?>
@@ -29,8 +47,20 @@
                                 </p>
                             </div>
                         </div>
+                        <style>
+                            span.is-info a{
+                                color: white !important;
+                            }
+                        </style>
                         <div class="content article-body">
                             <?= the_excerpt(); ?>
+                            <?php $categories = get_the_category(); ?>
+                            <?php foreach ($categories as $category) : ?>
+                                <span class="tag is-info">
+                                    <a href="<?= get_category_link($category->term_id); ?>"><?= $category->name ?></a>
+                                </span>
+                            <?php endforeach ?>
+                            <!-- <span class="tag is-info"><?= the_category( ' ' ); ?></span> -->
                         </div>
                     </div>
                 </div>
