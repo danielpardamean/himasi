@@ -14,7 +14,7 @@
                         'post_type'=>'post',
                         'post_status'=>'publish',
                         'posts_per_page'=>-1,
-                        'cat' => '2'
+                        'cat' => get_category_by_slug('blog')->term_id
                     );
 
                 }elseif(is_page('event')){
@@ -22,7 +22,7 @@
                         'post_type'=>'post',
                         'post_status'=>'publish',
                         'posts_per_page'=>-1,
-                        'cat' => '3'
+                        'cat' => get_category_by_slug('event')->term_id
                     );
                 }
             ?>
@@ -60,13 +60,35 @@
                                     <a href="<?= get_category_link($category->term_id); ?>"><?= $category->name ?></a>
                                 </span>
                             <?php endforeach ?>
-                            <!-- <span class="tag is-info"><?= the_category( ' ' ); ?></span> -->
                         </div>
                     </div>
                 </div>
                 <!-- END ARTICLE -->
             <?php
-            endwhile; endif;
+            endwhile;
+        else: ?>
+        <!-- START ARTICLE -->
+        <div class="card article">
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-content has-text-centered">
+                        <p class="subtitle is-6 article-subtitle">
+                            Tidak Ada Post yang tersedia
+                        </p>
+                    </div>
+                </div>
+                <style>
+                    span.is-info a{
+                        color: white !important;
+                    }
+                </style>
+                <div class="content article-body">
+                </div>
+            </div>
+        </div>
+        <!-- END ARTICLE -->
+        <?php
+        endif;
 			?>
         </section>
         <!-- END ARTICLE FEED -->

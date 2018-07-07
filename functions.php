@@ -130,7 +130,7 @@ function perkenalan_himasi($wp_customize)
     // 2.1 Define an input for the "company_name" setting
     $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'perkenalan_himasi_deskripsi_line_height', // unique ID for the control
         array(
-        'label' => __('Deskripsi', 'toolset_starter'),
+        'label' => __('Deskripsi Line Height', 'toolset_starter'),
         'settings' => 'perkenalan_himasi_deskripsi_line_height', // id of previously created setting "company_name"
         'type' => 'text',
         'section' => 'perkenalan_himasi' // ID of our "Company Details" section
@@ -455,6 +455,16 @@ function create_pages(){
         $post = array(
             'post_content'   => 'content', //content of page
             'post_title'     =>'Blog', //title of page
+            'post_status'    =>  'publish' , //status of page - publish or draft
+            'post_type'      =>  'page'  // type of post
+        );
+        wp_insert_post( $post );
+    }
+
+    if(get_page_by_title('Event') == null){
+        $post = array(
+            'post_content'   => 'content', //content of page
+            'post_title'     =>'Event', //title of page
             'post_status'    =>  'publish' , //status of page - publish or draft
             'post_type'      =>  'page'  // type of post
         );

@@ -52,7 +52,9 @@
          <div class="container">
             <div class="navbar-brand">
                <figure class="image">
-                     <img src="<?= get_theme_mod('logo_setting', get_template_directory_uri() . '/src/images/logo.png') ?>" alt="Logo">
+                     <a href="/">
+                        <img src="<?= get_theme_mod('logo_setting', get_template_directory_uri() . '/src/images/logo.png') ?>" alt="Logo">
+                     </a>
                </figure>
                <div id="navbar-burger-id" class="navbar-burger">
                   <span></span>
@@ -62,7 +64,6 @@
             </div>
             <div id="navbar-menu-id" class="navbar-menu">
                <div class="navbar-end">
-                  <a href="/" class="navbar-item">Home</a>
                   <?php $pages = get_pages(); ?>
                   <?php foreach($pages as $page): ?>
                   <a href="<?= get_permalink(get_page_by_title( $page->post_title)) ?>" class="navbar-item"><?= $page->post_title ?></a>
