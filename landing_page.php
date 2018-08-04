@@ -75,7 +75,7 @@
                                     }
                                     .kegiatan-image{
                                           width: 100%;
-                                          height:150px;
+                                          height:100%;
                                           border-radius: 3px;
                                     }
                                     .kegiatan-image-container{
@@ -127,7 +127,7 @@
                                           width: 103px;
                                     }
                               </style>
-                              <div class="columns is-centered is-multiline ">
+                              <div class="columns is-centered is-multiline is-mobile">
                                     <?php for ($index=1; $index <= 12; $index++) : ?>
                                     <div class="column team-avatar is-narrow tooltip" data-tooltip="<?= get_theme_mod('team_nama_'.$index) ?> sebagai <?= get_theme_mod('team_jabatan_'.$index) ?>">
                                           <div class='card-content is-flex is-horizontal-center image-center no-padding'>
