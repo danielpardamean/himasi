@@ -7,6 +7,7 @@
       <title><?= get_bloginfo('name') ?></title>
       <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.png">
       <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/src/css/bulma.min.css">
+      <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/src/css/bulma-tooltip.min.css">
       <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/src/css/custom.css">
       <script defer src="<?php echo get_bloginfo('template_directory'); ?>/src/js/font-awesome.js"></script>
       <link rel="stylesheet" type="text/css" href="<?php echo get_bloginfo('template_directory'); ?>/src/css/blog.css">

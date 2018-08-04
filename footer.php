@@ -7,7 +7,7 @@
                 margin: 2px;
         }
 </style>
-<div class="columns himasi-footer">
+<div class="columns himasi-footer has-background-light">
         <div class="section column">
                 <div class="container">
                         <div class="columns">
